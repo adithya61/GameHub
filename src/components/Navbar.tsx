@@ -1,15 +1,12 @@
-import { Button, Flex, HStack, Image, useColorMode } from "@chakra-ui/react";
+import { HStack, Image } from "@chakra-ui/react";
 import logo from "../assets/logo.webp";
+import DarkMode from "./DarkMode";
 
 const Navbar = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-
   return (
-    <HStack display={'Flex'}>
+    <HStack justifyContent={"space-between"} padding={"10px"}>
       <Image src={logo} boxSize={"60px"} />
-      <Button justifyContent={"flex-end"} onClick={toggleColorMode}>
-        Toggle {colorMode === "light" ? "Dark" : "Light"}
-      </Button>
+      <DarkMode />
     </HStack>
   );
 };
