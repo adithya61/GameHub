@@ -25,7 +25,7 @@ const GameGrid = () => {
 
   return (
     <>
-      {error && <Text>{error}</Text>}
+      {error && games.length == 0 && <Text color={"red.500"}>{error}</Text>}
       <ul>
         {games.map((games) => (
           <li key={games.id}>{games.name}</li>
