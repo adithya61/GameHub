@@ -7,7 +7,7 @@ interface fetchResponse<T> {
     results: T[];
 }
 
-// Ignore explicit any error.
+// Ignore "explicit any" error.
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const  useData = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, deps?:any[]) => {
 
