@@ -21,7 +21,10 @@ const GameGrid = () => {
             xl: 4,
           }}
           spacing={4}
-          padding={'10px'}
+          padding={{
+            base: "15px",
+            lg: "40px",
+          }}
         >
           {isLoading &&
             Skeletons.map((skeleton) => (
