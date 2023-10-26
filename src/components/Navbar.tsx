@@ -8,19 +8,18 @@ const Navbar = () => {
       <HStack>
         <Image src={logo} boxSize={"60px"} />
         <Text
-          fontFamily={"mono"}
+          fontFamily={"Montserrat"}
           color="whiteAlpha.900"
-          fontWeight={"800"}
-          fontSize={40}
+          fontWeight={"600"}
+          fontSize={30}
         >
           Game
         </Text>
         <Text
-          fontFamily={"serif"}
-          color="orange.500"
-          fontWeight={"800"}
-          fontSize={40}
-          backgroundColor={""}
+          fontFamily={"Montserrat"}
+          color="#FF7000"
+          fontWeight={"600"}
+          fontSize={30}
         >
           Hub
         </Text>
