@@ -1,6 +1,10 @@
+import noImage from "../assets/no-image-placeholder.webp";
+
+
+
 const getCroppedUrl = (Url: string | null) => {
 
-    if(!Url) return '';
+    if(!Url) return noImage;
 
     const target = "media/";
 
