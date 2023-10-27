@@ -24,4 +24,3 @@ const useGames = (gameQuery: GameQuery) => useData<Game>("games", {params: {
 }}, [gameQuery]);
 
 export default useGames;
- 
