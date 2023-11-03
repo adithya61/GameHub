@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import platforms from '../data/platforms';
 import { Platform } from './useGames';
 import apiClient from '../services/api-client';
-import { fetchResponse } from './useData';
+import { fetchResponse } from '../services/api-client';
 
 // useData<Platform>("platforms/lists/parents")
 // copy from stored data :
