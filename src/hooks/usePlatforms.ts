@@ -1,8 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
 import platforms from '../data/platforms';
-import { Platform } from './useGames';
 import apiClient from '../services/api-client';
 import { fetchResponse } from '../services/api-client';
+
+
+export interface Platform {
+    id: number;
+    name: string;
+    slug: string;
+}
+
 
 // useData<Platform>("platforms/lists/parents")
 // copy from stored data :
