@@ -4,11 +4,13 @@
 
 * Deployed Live at : [GameHub](https://videogameshub.netlify.app/)
 
-## Concepts Used.
+## Concepts, Tools Used.
 
 - SOLID Coding principles.
+- Reduce API calls by caching data using React Query.
 - Typescript.
-- Custom Hooks
+- Custom Hooks.
+- Chakra UI.
 - Optimize images to reduce load time.
 - Reusable Services.
 - Single Responsibility for Components.
