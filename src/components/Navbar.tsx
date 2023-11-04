@@ -11,7 +11,7 @@ const Navbar = ({ onSearch }: Props) => {
       <Image src={logo} boxSize={"60px"} />
       <Text
         fontFamily={"Montserrat"}
-        color="whiteAlpha.900"
+        color="gray.500"
         fontWeight={"600"}
         fontSize={{
           base: 20,

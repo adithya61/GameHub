@@ -28,7 +28,7 @@ function App() {
       }}
       templateColumns={{
         base: "1fr",
-        lg: "200px 1fr",
+        lg: "250px 1fr",
       }}
     >
       <GridItem area={"nav"}>
@@ -37,7 +37,7 @@ function App() {
         />
       </GridItem>
       <Show above="lg">
-        <GridItem area={"aside"} paddingX={5}>
+        <GridItem area={"aside"} paddingX={3}>
           <GenreList
             selectedGenre={gameQuery.genre?.id}
             onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
@@ -47,8 +47,8 @@ function App() {
       <GridItem area={"main"}>
         <Box
           padding={{
-            base: 4,
-            lg: 10,
+            base: 1,
+            lg: 1,
           }}
         >
           <GameHeading platform={gameQuery.platform} genre={gameQuery.genre} />

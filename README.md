@@ -6,11 +6,13 @@
 
 ## Concepts, Tools Used.
 
-- SOLID Coding principles.
 - Reduce API calls by caching data using React Query.
 - Typescript.
+- Dark Mode.
+- Infinite S≥crolling.
+- SOLID Coding principles.
 - Custom Hooks.
 - Chakra UI.
 - Optimize images to reduce load time.
 - Reusable Services.
-- Single Responsibility for Components.
+- Single Responsibility / Separation of concerns for Components.

@@ -24,7 +24,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   return (
     <>
       <List>
-        {data?.map((genre) => (
+        {data?.results.map((genre) => (
           <ListItem key={genre.id} paddingY={"5px"}>
             <HStack>
               <Image
@@ -34,7 +34,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
               />
               <Button
                 fontWeight={genre.id == selectedGenre ? "800" : "normal"}
-                color={genre.id == selectedGenre ? "gray.500" : "white"}
+                color={genre.id == selectedGenre ? "gray.600" : "gray.500"}
                 onClick={() => onSelectGenre(genre)}
                 fontSize={"lg"}
                 variant={"link"}
