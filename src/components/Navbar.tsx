@@ -8,7 +8,13 @@ interface Props {
 const Navbar = ({ onSearch }: Props) => {
   return (
     <HStack padding={"10px"} marginBottom={5}>
-      <Image src={logo} boxSize={"60px"} />
+      <Image
+        src={logo}
+        boxSize={{
+          base: "35px",
+          md: "60px",
+        }}
+      />
       <Text
         fontFamily={"Montserrat"}
         color="gray.500"
