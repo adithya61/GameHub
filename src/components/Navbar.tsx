@@ -20,7 +20,8 @@ const Navbar = ({ onSearch }: Props) => {
         color="gray.500"
         fontWeight={"600"}
         fontSize={{
-          base: 20,
+          base: 15,
+          md: 30,
           lg: 30,
         }}
       >
@@ -31,7 +32,8 @@ const Navbar = ({ onSearch }: Props) => {
         color="#FF7000"
         fontWeight={"600"}
         fontSize={{
-          base: 20,
+          base: 15,
+          md: 30,
           lg: 30,
         }}
       >
