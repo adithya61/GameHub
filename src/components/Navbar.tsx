@@ -2,10 +2,8 @@ import { Box, HStack, Image, Text } from "@chakra-ui/react";
 import logo from "../assets/logo.webp";
 import DarkMode from "./DarkMode";
 import SearchInput from "./SearchInput";
-interface Props {
-  onSearch: (searchText: string) => void;
-}
-const Navbar = ({ onSearch }: Props) => {
+
+const Navbar = () => {
   return (
     <HStack padding={"10px"} marginBottom={5}>
       <Image
@@ -32,7 +30,7 @@ const Navbar = ({ onSearch }: Props) => {
         color="#FF7000"
         fontWeight={"600"}
         fontSize={{
-          base: 15,
+          base: 20,
           md: 30,
           lg: 30,
         }}
@@ -41,7 +39,7 @@ const Navbar = ({ onSearch }: Props) => {
       </Text>
 
       <Box width={"100%"}>
-        <SearchInput onSearch={onSearch} />
+        <SearchInput />
       </Box>
       <DarkMode />
     </HStack>

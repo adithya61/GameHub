@@ -8,17 +8,13 @@ import {
 } from "@chakra-ui/react";
 import useGenres from "../hooks/useGenres";
 import getCroppedUrl from "../services/image-url";
+import useGameQueryStore from "./store";
 
-interface Props {
-  onSelectGenre: (genre: number) => void;
-  selectedGenreId?: number;
-}
-
-const GenreList = ({
-  onSelectGenre,
-  selectedGenreId: selectedGenre,
-}: Props) => {
+const GenreList = () => {
   const { data, error, isLoading } = useGenres();
+
+  const selectedGenre = useGameQueryStore((s) => s.gameQuery.genreId);
+  const onSelectGenre = useGameQueryStore((s) => s.setGenreId);
 
   if (error) return null;
 

@@ -1,13 +1,12 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { GameQuery } from '../App';
+import ms from 'ms';
+import useGameQueryStore from '../components/store';
 import { Platform } from "../hooks/usePlatforms";
 import APIClient, { fetchResponse } from '../services/api-client';
-import ms from 'ms';
 
 const client = new APIClient<Game>('games');
 
 export interface Game {
-    // #region Properties (6)
 
     background_image: string;
     id: number;
@@ -16,10 +15,10 @@ export interface Game {
     parent_platforms: {platform: Platform,}[];
     rating_top: number;
 
-    // #endregion Properties (6)
 }
 
-const useGames = (gameQuery: GameQuery) => {
+const useGames = () => {
+    const gameQuery = useGameQueryStore(s => s.gameQuery);
     const controller =  new AbortController();
 
     return useInfiniteQuery<fetchResponse<Game>, Error>({
