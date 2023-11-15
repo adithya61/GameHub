@@ -16,7 +16,7 @@ function App() {
       <GridItem area={"nav"}>
         <Navbar />
       </GridItem>
-      <GridItem area={"main"}>
+      <GridItem padding={5} area={"main"}>
         <Outlet />
       </GridItem>
     </Grid>

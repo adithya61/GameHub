@@ -15,6 +15,7 @@ class APIClient <T>{
 
     constructor(public endpoint: string) {}
 
+    getPage = () => client.get<T>(this.endpoint).then(res => res.data);
 
     get = (requestConfig?: AxiosRequestConfig) => client.get<fetchResponse<T>>(this.endpoint, 
         {...requestConfig})
@@ -23,3 +24,4 @@ class APIClient <T>{
 }
 
 export default APIClient;
+ 
