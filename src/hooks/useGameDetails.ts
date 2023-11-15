@@ -4,7 +4,7 @@ import APIClient from '../services/api-client';
 import { GameDetails } from '../entities/GameDetails';
 
 
-const useGameDetails = (slug?: string) => {
+const useGameDetails = (slug: string) => {
     
     const client = new APIClient<GameDetails>('games/'+slug);
     return useQuery<GameDetails, Error>({
