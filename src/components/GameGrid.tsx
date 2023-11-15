@@ -12,7 +12,6 @@ const GameGrid = () => {
 
   if (error) return <Text color={"red.500"}>{error.message}</Text>;
 
-
   return (
     <InfiniteScroll
       dataLength={data ? data?.pages.length : 0}
@@ -43,9 +42,9 @@ const GameGrid = () => {
         {data?.pages.map((page) =>
           page.results.map((game) => (
             <GameCardContainer key={game.id}>
-                <Link to={`/games/${game.slug}`} >
-              <GameCard key={game.id} game={game} />
-                </Link>
+              <Link to={`/games/${game.slug}`}>
+                <GameCard key={game.id} game={game} />
+              </Link>
             </GameCardContainer>
           ))
         )}

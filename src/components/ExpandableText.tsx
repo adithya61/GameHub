@@ -8,6 +8,8 @@ interface Props {
 const ExpandableText = ({ description }: Props) => {
   const [expanded, setExpanded] = useState(true);
 
+  if (!description) return null;
+
   const len = description?.length;
 
   if (len && len <= 300) return <Text>{description}</Text>;
