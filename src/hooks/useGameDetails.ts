@@ -1,14 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import ms from 'ms';
 import APIClient from '../services/api-client';
-
-
-export interface GameDetails {
-    id: number;
-    name: string;
-    background_image: string;
-    description_raw: string;
-}
+import { GameDetails } from '../entities/GameDetails';
 
 
 const useGameDetails = (slug?: string) => {
