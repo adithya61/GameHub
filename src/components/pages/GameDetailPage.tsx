@@ -1,4 +1,4 @@
-import { Box, Heading, Spinner, Text } from "@chakra-ui/react";
+import { Grid, GridItem, Heading, Spinner, Text } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import useGameDetails from "../../hooks/useGameDetails";
 import ExpandableText from "../ExpandableText";
@@ -12,18 +12,30 @@ const GameDetailPage = () => {
   const { data, error, isLoading } = useGameDetails(slug!);
 
   return (
-    <>
-      {error && <Text>{error.message}</Text>}
-      {isLoading && <Spinner />}
-      <Heading>{data?.name}</Heading>
-      <Box>
+    <Grid
+      templateAreas={{
+        base: `'text' 'media'`,
+        md: `"text media"`,
+      }}
+      templateColumns={{
+        base: "1fr",
+        md: "1fr 1fr",
+      }}
+    >
+      <GridItem area={"text"}>
+        {error && <Text>{error.message}</Text>}
+        {isLoading && <Spinner />}
+        <Heading>{data?.name}</Heading>
         <ExpandableText description={data?.description_raw} />
-      </Box>
-      <GameInfo gameInfo={data} />
-      <Trailer slug={slug} />
-
-      <Screenshots slug={slug} />
-    </>
+        <GameInfo gameInfo={data} />
+      </GridItem>
+      <GridItem marginLeft={{
+        md: '15px'
+      }} area={"media"}>
+        <Trailer slug={slug} />
+        <Screenshots slug={slug} />
+      </GridItem>
+    </Grid>
   );
 };
 

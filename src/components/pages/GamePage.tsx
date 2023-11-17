@@ -27,7 +27,6 @@ const GamePage = () => {
         <Box
           padding={{
             base: 1,
-            lg: 1,
           }}
         >
           <GameHeading />
