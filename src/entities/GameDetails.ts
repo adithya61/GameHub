@@ -1,6 +1,5 @@
-import { Genre } from "./Genre";
-import { Platform } from './Platform';
-
+import Genre  from "./Genre";
+import Platform  from './Platform';
 
 interface PlatformObject {
     platform: Platform;
@@ -12,7 +11,7 @@ interface Publishers {
     slug: string;
 }
 
-export interface GameDetails {
+export default interface GameDetails {
     id: number;
     name: string;
     slug: string;

@@ -1,7 +1,6 @@
-import { Platform } from './Platform';
+import Platform from './Platform';
 
-
-export interface Game {
+export default interface Game {
 
     background_image: string;
     id: number;

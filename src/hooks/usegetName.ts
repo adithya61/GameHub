@@ -1,6 +1,6 @@
 import { fetchResponse } from "../services/api-client";
-import { Genre } from '../entities/Genre';
-import { Platform } from '../entities/Platform';
+import  Genre  from '../entities/Genre';
+import Platform  from '../entities/Platform';
 
 const usegetName = (data?: fetchResponse<Genre | Platform>, id?:number) => {
 
