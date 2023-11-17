@@ -30,7 +30,7 @@
 
 - Clone the repo
 
-`git clone https://github.com/adithya61/gamehub`
+`git clone https://github.com/adithya61/gamehub.git`
 
 - cd to directory.
 
