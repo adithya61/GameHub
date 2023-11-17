@@ -1,12 +1,17 @@
 import { Box, HStack, Image, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.webp";
 import DarkMode from "./DarkMode";
 import SearchInput from "./SearchInput";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <HStack padding={"10px"} marginBottom={5}>
       <Image
+        onClick={() => navigate("/")}
+        cursor={"pointer"}
         src={logo}
         boxSize={{
           base: "35px",
