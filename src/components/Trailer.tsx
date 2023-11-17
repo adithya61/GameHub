@@ -8,8 +8,11 @@ interface Props {
 const Trailer = ({ slug }: Props) => {
   const { data: trailerData } = useGameTrailer(slug!);
 
-  const videoUrl = trailerData?.results[0].data["480"];
-  const previewImage = trailerData?.results[0].preview;
+  const videoUrl = trailerData?.results[0]?.data["480"];
+  const previewImage = trailerData?.results[0]?.preview;
+
+  if (!videoUrl) return null;
+
   return (
     <>
       <Box>
@@ -17,7 +20,6 @@ const Trailer = ({ slug }: Props) => {
           style={{
             marginTop: "25px",
           }}
-          autoPlay
           poster={previewImage}
           src={videoUrl}
           controls

@@ -12,9 +12,8 @@ const ScreenshotsPage = ({ slug }: Props) => {
   if (!data) return null;
 
   return (
-    <Box>
+    <Box marginTop={10}>
       <SimpleGrid
-        maxWidth="100vw"
         columns={{
           base: 1,
           md: 2,
@@ -25,6 +24,7 @@ const ScreenshotsPage = ({ slug }: Props) => {
       >
         {data.results?.map((img) => (
           <Image
+            key={img.id}
             boxSize={{
               base: "1fr",
               md: "1fr 1fr",
