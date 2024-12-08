@@ -14,6 +14,7 @@
 ## Concepts, Tools Used.
 
 - React Query for Caching.
+- Lazy Loading
 - Zustand State Management.
 - Typescript.
 - Dark Mode.
